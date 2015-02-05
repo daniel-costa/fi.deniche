@@ -1,0 +1,26 @@
+- URL Rewritting
+
+- Create emails
+	+ inqueries@deniche.fi + in FI and SE
+	+ returns@deniche.fi + in FI and SE
+	+ contact@deniche.fi
+
+- Pick good colors for bullets in the menu
+
+- Fill the description for products
+
+- Write page product & quality
+- Write page Buy a gift card
+- Write page Shipping
+- Write page Return a product
+- Write page Our team
+- Write page Career possibilities
+- Write page Follow our blog
+
+- Create social media
+	+ Facebook
+	+ twitter
+	+ youtube
+
+- Change lang attribute on html tag in all pages
+- Change page <title>

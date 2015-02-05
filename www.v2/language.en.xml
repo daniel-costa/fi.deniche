@@ -1,0 +1,21 @@
+<labels>
+	<label name="title">iPhone Cases</label>
+
+	<!-- Additional information block -->
+	<label name="ai_title">Additional Info</label>
+	<label name="ai_ship_1">Shipping in</label>
+	<label name="ai_ship_2">24h</label>
+	<label name="ai_tested_1">All products</label>
+	<label name="ai_tested_2">tested</label>
+	<label name="ai_tested_3">in Finland</label>
+	<label name="ai_return_1">Seven day</label>
+	<label name="ai_return_2">return policy</label>
+	<label name="ai_inter_1">International</label>
+	<label name="ai_inter_2">shipping</label>
+	<label name="ai_easy_1">Easy</label>
+	<label name="ai_easy_2">payment methods</label>
+	<label name="ai_account_1">No account</label>
+	<label name="ai_account_2">needed</label>
+	<label name="ai_checkout_1">60-second</label>
+	<label name="ai_checkout_2">checkout</label>
+</label>

@@ -1,0 +1,8 @@
+RewriteEngine on
+RewriteBase /fi.deniche/www/
+
+RewriteRule ^index.html$	index.php [L]
+RewriteRule ^information.html$ information.php [L]
+RewriteRule ^about/(.+).html$ information.html#$1 [NE,L,R]
+RewriteRule ^language-(.+).html$ language.choose.php?lang=$1 [L]
+RewriteRule ^(model|feature|color|thickness)-(.+)-(.+).html$ filters.set.php?filter=$1&id=$3 [L]
