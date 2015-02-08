@@ -24,7 +24,7 @@ body {
 }
 
 .header .languages a {
-	font-family : "Avenir Next";
+	font-family : "Avenir Next", "Helvetica Neue", Helvetica, sans-serif;
 	font-size : 12px;
 	color : rgba(181, 204, 208, 1);
 	margin : auto 10px;
@@ -47,7 +47,7 @@ body {
 
 .header .search input {
 	height: 60px;
-	font-family : "Avenir Next";
+	font-family : "Avenir Next", "Helvetica Neue", Helvetica, sans-serif;
 	font-size : 16px;
 	color : rgba(158, 173, 175, 1);
 	border-color : rgba(241, 244, 246, 1);
@@ -66,7 +66,7 @@ body {
 }
 
 .header .title h1 {
-	font-family : "Avenir";
+	font-family : "Avenir", "Helvetica Neue", Helvetica, sans-serif;
 	font-size : 12px;
 	text-transform: uppercase;
 	letter-spacing: 2px;
@@ -81,7 +81,7 @@ body {
 }
 
 .footer h3 {
-	font-family : "Avenir Next";
+	font-family : "Avenir Next", "Helvetica Neue", Helvetica, sans-serif;
 	font-size : 12px;
 	font-weight : 700;
 	text-transform: uppercase;
@@ -91,13 +91,13 @@ body {
 
 .footer ul li {
 	line-height : 22px;
-	font-family : "Avenir Next";
+	font-family : "Avenir Next", "Helvetica Neue", Helvetica, sans-serif;
 	font-size : 14px;
 	color : rgba(255, 255, 255, 1);
 }
 
 .footer ul li a {
-	font-family : "Avenir Next";
+	font-family : "Avenir Next", "Helvetica Neue", Helvetica, sans-serif;
 	font-size : 14px;
 	color : rgba(200, 200, 200, 1);
 }
@@ -123,7 +123,7 @@ body {
 }
 
 .wrapper .part-menu .menu a {
-	font-family : "Avenir Next";
+	font-family : "Avenir Next", "Helvetica Neue", Helvetica, sans-serif;
 	font-size : 12px;
 	font-weight : bold;
 	color : #e3242d;
@@ -152,7 +152,7 @@ body {
 .infobox .right  { background : url(../../images/infobox-right.png) top left no-repeat; }
 
 .infobox h3 {
-	font-family : "Avenir Next";
+	font-family : "Avenir Next", "Helvetica Neue", Helvetica, sans-serif;
 	font-size : 21px;
 	font-weight : 400;
 	color : rgba(110, 119, 122, 1);
@@ -161,7 +161,7 @@ body {
 
 .infobox p {
 	line-height : 30px;
-	font-family : "Avenir Next";
+	font-family : "Avenir Next", "Helvetica Neue", Helvetica, sans-serif;
 	font-size : 17px;
 	color : rgba(110, 119, 122, 1);
 }
@@ -181,7 +181,7 @@ body {
 	line-height : 20px;
 	padding-top : 80px;
 	margin : 0px;
-	font-family : "Avenir Next";
+	font-family : "Avenir Next", "Helvetica Neue", Helvetica, sans-serif;
 	font-size : 12px;
 	font-weight : 500;
 	text-transform: uppercase;
@@ -208,7 +208,7 @@ body {
 .wrapper .cart .content p {
 	margin : 80px 10px 0px 10px;
 	line-height : 20px;
-	font-family : "Avenir Next";
+	font-family : "Avenir Next", "Helvetica Neue", Helvetica, sans-serif;
 	font-size : 13px;
 	color : rgba(123, 152, 163, 1);
 }
@@ -217,7 +217,7 @@ body {
 	height : 52px;
 	line-height : 52px;
 	margin : 0px;
-	font-family : "Avenir Next";
+	font-family : "Avenir Next", "Helvetica Neue", Helvetica, sans-serif;
 	font-size : 12px;
 	font-weight : bold;
 	text-transform: uppercase;
@@ -230,7 +230,7 @@ body {
 	height : 75px;
 	margin: 30px auto;
 	display : block;
-	font-family : "Avenir Next";
+	font-family : "Avenir Next", "Helvetica Neue", Helvetica, sans-serif;
 	font-size : 12px;
 	font-weight : bold;
 	text-transform: uppercase;
@@ -244,7 +244,7 @@ body {
 	line-height : 52px;
 	margin : 0px;
 	text-align : center;
-	font-family : "Avenir Next";
+	font-family : "Avenir Next", "Helvetica Neue", Helvetica, sans-serif;
 	font-size : 12px;
 	font-weight : bold;
 	text-transform: uppercase;
@@ -261,7 +261,7 @@ body {
 }
 
 .wrapper .filters .bloc li, .wrapper .filters .bloc a {
-	font-family : "Avenir Next";
+	font-family : "Avenir Next", "Helvetica Neue", Helvetica, sans-serif;
 	font-size : 16px;
 	font-weight : 300;
 	color : rgba(123, 152, 163, 1);
@@ -322,7 +322,7 @@ body {
 }
 
 .home .product .add-to-cart {
-	font-family : "Avenir Next";
+	font-family : "Avenir Next", "Helvetica Neue", Helvetica, sans-serif;
 	font-size : 12px;
 	font-weight : 600;
 	text-decoration: none;
@@ -347,7 +347,7 @@ body {
 .home .product h2 {
 	margin : 20px auto 0px auto;
 	text-align : center;
-	font-family : "Avenir Next";
+	font-family : "Avenir Next", "Helvetica Neue", Helvetica, sans-serif;
 	font-size : 16px;
 	font-weight : 500;
 	color : rgba(239, 33, 70, 1);
@@ -356,7 +356,7 @@ body {
 .home .product h3 {
 	margin : 5px auto 10px auto;
 	text-align : center;
-	font-family : "Avenir Next";
+	font-family : "Avenir Next", "Helvetica Neue", Helvetica, sans-serif;
 	font-size : 12px;
 	font-weight : 300;
 	color : rgba(239, 33, 70, 1);
@@ -373,7 +373,7 @@ body {
 
 .home .product .price {
 	text-align : center;
-	font-family : "Avenir Next";
+	font-family : "Avenir Next", "Helvetica Neue", Helvetica, sans-serif;
 	font-size : 18px;
 	color : rgba(227, 36, 45, 1);
 	line-height : 50px;
@@ -385,7 +385,7 @@ body {
 }
 
 .info h1 {
-	font-family : "Avenir Next";
+	font-family : "Avenir Next", "Helvetica Neue", Helvetica, sans-serif;
 	font-size : 25px;
 	font-weight: normal;
 	color : #2b2e2f;
@@ -393,14 +393,14 @@ body {
 }
 
 .info h2 {
-	font-family : "Avenir Next";
+	font-family : "Avenir Next", "Helvetica Neue", Helvetica, sans-serif;
 	font-size : 18px;
 	color : #ef2146;
 	margin : 20px auto 10px auto;
 }
 
 .info p {
-	font-family : "Avenir Next";
+	font-family : "Avenir Next", "Helvetica Neue", Helvetica, sans-serif;
 	font-size : 16px;
 	color : #6e777a;
 	font-weight : 300;
