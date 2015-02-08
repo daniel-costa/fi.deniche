@@ -12,7 +12,7 @@
 		<?php include_once('UX.head.php'); ?>
 		<title>Déniché</title>
 	</head>
-	<body class="home">
+	<body class="page_name">
 		<?php include_once('UX.section.header.php'); ?>
 
 		<div class="continer-fluid wrapper">
