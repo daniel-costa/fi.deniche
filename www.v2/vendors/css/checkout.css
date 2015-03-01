@@ -1,0 +1,268 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 12-Feb-2015, 14:29:34
+    Author     : Bibashs
+*/
+.checkout .myCart{
+    width: auto;
+    padding: 0;
+}
+
+.myCart .mycart_head h4{
+    height: 157px;
+    padding-top: 80px;
+    font-family: "Helvetica";
+    font-size: 10px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #D8D8D8;
+    background: url(../../images/ico-cart.png) center 40px no-repeat
+        #1C1C1C;
+    text-align: center;
+}
+.myCart .mycart_content{
+    background-color: rgba(242, 250, 251, 1);
+    margin-top: -10px;
+}
+.myCart .mycart_content table{
+    width: 100%;
+    border-bottom: 2px solid #D8D8D8;
+}
+.mycart_content #img_col{
+    width: 50px; 
+    height: 50px;
+}
+.mycart_content #qnt_col{ 
+    text-align: center;
+    font-family: "Helvetica";
+    font-size: 18px;
+}
+.mycart_content #title_col{
+    font-family: "Helvetica";
+    text-align: center;
+    font-size: 18px;
+}
+.mycart_content #price_col{
+    font-family: "Helvetica";
+    font-size: 18px;
+    text-align: center;
+    color: rgba(227, 36, 45, 1);
+}
+.mycart_content table tr .item_remove{
+    font-size: 10px;
+    font-family:"Helvetica";
+    color: white;
+    position:absolute;
+    margin-right: 3px;
+    margin-top: -90px;
+    text-align: center;
+    float: right;
+    right:0;
+    width: 70px;
+    height: 30px; 
+    background-color:#ef2146;
+    padding-top: 10px;
+    text-transform: uppercase;
+}
+.mycart_content table tr .item_remove{
+    display: none;
+}
+.mycart_content table tr:hover .item_remove{
+    display: inline-block;
+    text-decoration: none;
+}
+.promo{
+    background-color: rgba(242, 250, 251, 1);
+    overflow:hidden;
+}
+.promo .promo_input{
+    float:left;
+}
+.promo_input h5{
+    margin-left: 40px;
+    font-family: "Helvetica";
+    font-size: 13px;
+    color: rgba(123, 152, 163, 1);
+}
+.promo_input .col-lg-6 .input-group{
+    width: 120px; 
+    margin-left: 60px; 
+    margin-bottom: 30px;
+}
+.form-control{
+    border-bottom-left-radius: 20px; 
+    border-top-left-radius: 20px
+}
+
+.promo .total_price{
+    margin: 20px 25px 0 0;
+    float:right;
+    font-family: "Helvetica";
+    font-size: 20px;
+    color: rgba(227, 36, 45, 1);
+}
+
+.error_message{
+    position: relative;
+    border: 1px solid #DF0101;
+    width: 100%;
+    height: 130px;
+    margin-top: 15px;
+    padding: 5px 14px;
+    background-color: #DF0101;
+    color: #D8D8D8;
+    font-family:"Helvetica";
+    font-size: 25px;
+    font-weight: 500;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 90px; 
+}
+.error_message:before{
+    content: '';
+    display: block;
+    position: absolute;
+    bottom: -8px;
+    left: 40px;
+    width: 40px;
+    height: 40px;
+    background-color: #DF0101;
+    transform: rotate(45deg);
+
+}
+
+.myCart .checkout_nav ul{
+    list-style: none;
+    background-color: rgba(242, 250, 251, 1);
+    margin-top: 15px;
+    border: -1px solid #848484;
+}
+.checkout_nav li{
+    font-family: "Helvetica";
+    display: inline-block;
+    font-weight: bold;
+    font-size: 11px;
+}
+.checkout_nav li:first-child{
+    float: left;
+    margin-top: 15px;
+}
+.checkout_nav li:last-child{
+    float: right;
+    margin-right: 20px;
+    margin-top: 15px;
+}
+.checkout_nav a{
+    text-decoration: none;
+    color:#848484;
+    text-transform: uppercase;
+
+}
+
+.checkout_nav a:hover{
+    color: black;
+}
+
+.checkout_nav a.active{
+    color: black;
+    cursor: default;
+}
+/*
+@media screen and (min-width: 600px) {
+    .checkout_nav li {
+        width: 120px;
+        border-bottom: none;
+        height: 50px;
+        line-height: 50px;
+        font-size: 1.4em;
+    }
+
+     Option 1 - Display Inline 
+    .checkout_nav li {
+        display: inline-block;
+        margin-right: -4px;
+    }
+}*/
+
+
+.required{
+    color: red;
+    font-weight: normal;
+}
+.form{
+    display: block;
+    margin:10px 20px 10px 40px ;
+}
+.form input[type=text],
+.form input[type=number],
+.form select{
+    border: 1px solid #848484;
+    height: 40px;
+    font-family: "Helvetica";
+    font-size: 15px;
+    padding-left:20px;
+    padding-right:20px;
+    margin-bottom:20px;
+}
+#first_name, #last_name{
+    width: 280px;
+    display: inline;
+}
+#address1, #address2{
+    width: 80%;
+}
+#city, #zip{
+    width: 280px;;
+    display: inline;
+}
+#btn{
+    width: 280px;
+
+}
+.form input[type=submit]{
+    background-color: #2E2EFE;
+    border: 1px solid;
+    padding: 5px 15px 5px 15px;
+    color: white;
+    font-family: "Helvetica";
+    font-size: 15px;
+    height: 40px;
+    box-shadow: inset -1px -1px 3px #2E2EFE;
+    -webkit-box-shadow: inset -1px -1px 3px #2E2EFE;
+    border-radius: 4px;
+    border-radius: 4px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+}
+#second_nav{
+    width: 100%;
+}
+#second_nav div.bank_logo{
+    margin: 20px 10px 20px 40px;
+    padding: 5px;
+    height: auto;
+    width: auto;
+    float: left;
+
+}
+#second_nav div.bank_logo img{
+    display: inline;
+    margin: 5px;
+    border: 1px solid #848484;
+    height: 70px;
+    width: 90px;
+}
+.desc{
+    text-align: center;
+    font-weight: normal;
+    width: 120px;
+    margin: 5px;
+    font-family: "Helvetica";
+    color: rgba(123, 152, 163, 1);
+}
+
+

@@ -6,3 +6,5 @@
 <link href="vendors/css/c3.css" rel="stylesheet">
 <link href="vendors/css/main.css" rel="stylesheet">
 <link href="vendors/css/common.css" rel="stylesheet">
+<link href="vendors/css/gallery.css" rel="stylesheet">
+<link href="vendors/css/checkout.css" rel="stylesheet">
