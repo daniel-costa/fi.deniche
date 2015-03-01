@@ -22,8 +22,6 @@ if(in_array($id, $_SESSION['cart_items'])){
 	$cart_items = array();
 	$cart_items = $_SESSION['cart_items'];
 
-
-
 	if(($key = array_search($id, $cart_items)) !== false) {
 		
 		$counts = array_count_values($cart_items);
