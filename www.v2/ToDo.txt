@@ -24,4 +24,3 @@
 - Change page <title>
 
 - SQL Injection
-(- Test for github)
