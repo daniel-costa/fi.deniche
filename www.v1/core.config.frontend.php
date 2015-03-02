@@ -1,4 +1,4 @@
 <?php
-	$not_require_auth = true;
+	$do_not_require_auth = true;
 
 ?>

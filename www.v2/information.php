@@ -1,7 +1,6 @@
 <?php
 	
 	include_once('core.config.frontend.php');
-	include_once('../backend/core.config.php');
 
 	$products = array();
 	$p = getPagination("SELECT p.id, m.name, p.price, p.bargain, c.name, c.hexa_light, (SELECT id FROM product_image WHERE thumb = 1 and product = p.id LIMIT 0, 1)

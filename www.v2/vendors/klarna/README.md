@@ -36,10 +36,10 @@ To contribute, the following criteria needs to be fulfilled:
 [PEAR coding standards](http://pear.php.net/manual/en/standards.php)
 * All classes must follow the [PSR-0 standard](https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-0.md)
 * New features and bug fixes must have accompanying unit tests:
-    * Positive tests
-    * Negative tests
-    * Boundary tests (if possible)
-    * No less than 90% decision coverage
+	* Positive tests
+	* Negative tests
+	* Boundary tests (if possible)
+	* No less than 90% decision coverage
 * All unit tests should pass
 
 ## Questions and feedback

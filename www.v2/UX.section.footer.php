@@ -1,10 +1,6 @@
 <div class="footer container-fluid">
 	<div class="container">
 		<div class="row">
-                    <?php 
-                        require 'core/init.php';
-                    ?>
-
 			<div class="col-sm-5 col-md-5 col-md-offset-2 col-lg-4 col-lg-offset-4">
 				<h3>Information</h3>
 				<ul class="list-unstyled">
@@ -12,8 +8,6 @@
 					<li><a href="about/order.html">Order information</a></li>
 					<li><a href="about/shipping.html">Shipping</a></li>
 					<li><a href="about/returns.html">Return a product</a></li>
-
-
 				</ul>
 			</div>
 			<div class="col-sm-5  col-md-5 col-lg-4">

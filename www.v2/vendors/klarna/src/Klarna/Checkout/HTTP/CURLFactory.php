@@ -6,7 +6,7 @@
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
- *     http://www.apache.org/licenses/LICENSE-2.0
+ *	 http://www.apache.org/licenses/LICENSE-2.0
  *
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
@@ -19,34 +19,34 @@
  * PHP version 5.3
  *
  * @category   Payment
- * @package    Payment_Klarna
+ * @package	Payment_Klarna
  * @subpackage Unit_Tests
- * @author     Klarna <support@klarna.com>
+ * @author	 Klarna <support@klarna.com>
  * @copyright  2012 Klarna AB
- * @license    http://www.apache.org/licenses/LICENSE-2.0 Apache license v2.0
- * @link       http://developers.klarna.com/
+ * @license	http://www.apache.org/licenses/LICENSE-2.0 Apache license v2.0
+ * @link	   http://developers.klarna.com/
  */
 
 /**
  * Factory of cURL handles
  *
  * @category   Payment
- * @package    Payment_Klarna
+ * @package	Payment_Klarna
  * @subpackage Unit_Tests
- * @author     Klarna <support@klarna.com>
+ * @author	 Klarna <support@klarna.com>
  * @copyright  2012 Klarna AB
- * @license    http://www.apache.org/licenses/LICENSE-2.0 Apache license v2.0
- * @link       http://developers.klarna.com/
+ * @license	http://www.apache.org/licenses/LICENSE-2.0 Apache license v2.0
+ * @link	   http://developers.klarna.com/
  */
 class Klarna_Checkout_HTTP_CURLFactory
 {
-    /**
-     * Create a new cURL handle
-     *
-     * @return Klarna_Checkout_HTTP_CURLHandle
-     */
-    public function handle()
-    {
-        return new Klarna_Checkout_HTTP_CURLHandle();
-    }
+	/**
+	 * Create a new cURL handle
+	 *
+	 * @return Klarna_Checkout_HTTP_CURLHandle
+	 */
+	public function handle()
+	{
+		return new Klarna_Checkout_HTTP_CURLHandle();
+	}
 }

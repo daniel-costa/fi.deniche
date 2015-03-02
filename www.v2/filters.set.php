@@ -1,8 +1,7 @@
 <?php
 	
 	include_once('core.config.frontend.php');
-	include_once('../backend/core.config.php');
-	print_r($_GET);
+
 	if(isset($_GET['filter'])) {
 		switch($_GET['filter']) {
 			case 'model' :

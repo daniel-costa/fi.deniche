@@ -6,7 +6,7 @@
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
- *     http://www.apache.org/licenses/LICENSE-2.0
+ *	 http://www.apache.org/licenses/LICENSE-2.0
  *
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
@@ -20,37 +20,37 @@
  *
  * @category  Payment
  * @package   Klarna_Checkout
- * @author    David Keijser <david.keijser@klarna.com>
- * @author    Rickard Dybeck <rickard.dybeck@klarna.com>
+ * @author	David Keijser <david.keijser@klarna.com>
+ * @author	Rickard Dybeck <rickard.dybeck@klarna.com>
  * @copyright 2013 Klarna AB
  * @license   http://www.apache.org/licenses/LICENSE-2.0 Apache license v2.0
- * @link      http://developers.klarna.com/
+ * @link	  http://developers.klarna.com/
  */
 
 require_once 'src/Klarna/Checkout.php';
 
 Klarna_Checkout_Order::$contentType
-    = 'application/vnd.klarna.checkout.aggregated-order-v2+json';
+	= 'application/vnd.klarna.checkout.aggregated-order-v2+json';
 
 $sharedSecret = 'sharedSecret';
 $orderUri = 'https://checkout.testdrive.klarna.com/checkout/orders/ABC123';
 $cart = array(
-    array(
-        'reference' => '123456789',
-        'name' => 'Klarna t-shirt',
-        'quantity' => 4,
-        'unit_price' => 12300,
-        'discount_rate' => 1000,
-        'tax_rate' => 2500
-    ),
-    array(
-        'type' => 'shipping_fee',
-        'reference' => 'SHIPPING',
-        'name' => 'Shipping Fee',
-        'quantity' => 1,
-        'unit_price' => 4900,
-        'tax_rate' => 2500
-    )
+	array(
+		'reference' => '123456789',
+		'name' => 'Klarna t-shirt',
+		'quantity' => 4,
+		'unit_price' => 12300,
+		'discount_rate' => 1000,
+		'tax_rate' => 2500
+	),
+	array(
+		'type' => 'shipping_fee',
+		'reference' => 'SHIPPING',
+		'name' => 'Shipping Fee',
+		'quantity' => 1,
+		'unit_price' => 4900,
+		'tax_rate' => 2500
+	)
 );
 
 $connector = Klarna_Checkout_Connector::create($sharedSecret);
@@ -60,7 +60,7 @@ $order = new Klarna_Checkout_Order($connector, $orderUri);
 $update['cart']['items'] = array();
 
 foreach ($cart as $item) {
-    $update['cart']['items'][] = $item;
+	$update['cart']['items'][] = $item;
 }
 
 $order->update($update);

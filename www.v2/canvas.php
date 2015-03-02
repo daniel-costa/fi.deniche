@@ -1,7 +1,6 @@
 <?php
 	
 	include_once('core.config.frontend.php');
-	include_once('../backend/core.config.php');
 
 	// Here we get the data from the database
 ?>

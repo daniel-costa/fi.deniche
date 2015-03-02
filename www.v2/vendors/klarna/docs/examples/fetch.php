@@ -6,7 +6,7 @@
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
- *     http://www.apache.org/licenses/LICENSE-2.0
+ *	 http://www.apache.org/licenses/LICENSE-2.0
  *
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
@@ -20,17 +20,17 @@
  *
  * @category  Payment
  * @package   Klarna_Checkout
- * @author    David Keijser <david.keijser@klarna.com>
- * @author    Rickard Dybeck <rickard.dybeck@klarna.com>
+ * @author	David Keijser <david.keijser@klarna.com>
+ * @author	Rickard Dybeck <rickard.dybeck@klarna.com>
  * @copyright 2013 Klarna AB
  * @license   http://www.apache.org/licenses/LICENSE-2.0 Apache license v2.0
- * @link      http://developers.klarna.com/
+ * @link	  http://developers.klarna.com/
  */
 
 require_once 'src/Klarna/Checkout.php';
 
 Klarna_Checkout_Order::$contentType
-    = 'application/vnd.klarna.checkout.aggregated-order-v2+json';
+	= 'application/vnd.klarna.checkout.aggregated-order-v2+json';
 
 $sharedSecret = 'sharedSecret';
 $orderUri = 'https://checkout.testdrive.klarna.com/checkout/orders/ABC123';

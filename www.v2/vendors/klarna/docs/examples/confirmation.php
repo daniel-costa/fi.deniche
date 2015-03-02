@@ -6,7 +6,7 @@
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
- *     http://www.apache.org/licenses/LICENSE-2.0
+ *	 http://www.apache.org/licenses/LICENSE-2.0
  *
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
@@ -20,12 +20,12 @@
  * PHP version 5.3.4
  *
  * @category   Payment
- * @package    Payment_Klarna
+ * @package	Payment_Klarna
  * @subpackage Examples
- * @author     Klarna <support@klarna.com>
+ * @author	 Klarna <support@klarna.com>
  * @copyright  2012 Klarna AB
- * @license    http://www.apache.org/licenses/LICENSE-2.0 Apache license v2.0
- * @link       http://developers.klarna.com/
+ * @license	http://www.apache.org/licenses/LICENSE-2.0 Apache license v2.0
+ * @link	   http://developers.klarna.com/
  */
 
 require_once 'src/Klarna/Checkout.php';
@@ -33,7 +33,7 @@ require_once 'src/Klarna/Checkout.php';
 session_start();
 
 Klarna_Checkout_Order::$contentType
-    = "application/vnd.klarna.checkout.aggregated-order-v2+json";
+	= "application/vnd.klarna.checkout.aggregated-order-v2+json";
 
 $sharedSecret = 'sharedSecret';
 $checkoutId = $_SESSION['klarna_checkout'];
@@ -44,8 +44,8 @@ $order = new Klarna_Checkout_Order($connector, $checkoutId);
 $order->fetch();
 
 if ($order['status'] == 'checkout_incomplete') {
-    echo "Checkout not completed, redirect to checkout.php";
-    die;
+	echo "Checkout not completed, redirect to checkout.php";
+	die;
 }
 
 $snippet = $order['gui']['snippet'];

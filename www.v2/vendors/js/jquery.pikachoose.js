@@ -69,19 +69,19 @@
 	 * @cat Plugins/PikaChoose
 	 */
 	$.PikaChoose = function(e, o) {
-		this.options    = $.extend({}, defaults, o || {});
-		this.list       = null;
-		this.image      = null;
+		this.options	= $.extend({}, defaults, o || {});
+		this.list	   = null;
+		this.image	  = null;
 		this.anchor		= null;
 		this.caption	= null;
 		this.imgNav		= null;
-		this.imgPlay    = null;
+		this.imgPlay	= null;
 		this.imgPrev	= null;
-		this.imgNext    = null;
+		this.imgNext	= null;
 		this.textNext	= null;
 		this.textPrev	= null;
 		this.previous   = null;
-		this.next       = null;
+		this.next	   = null;
 		this.aniWrap	= null;
 		this.aniDiv		= null;
 		this.aniImg		= null;
@@ -161,10 +161,10 @@
 			}else{
 				this.wrap   = $("<div class='pika-stage'></div>").insertBefore(this.list);
 			}
-			this.image      = $("<img>").appendTo(this.wrap);
-			this.imgNav     = $("<div class='pika-imgnav'></div>").insertAfter(this.image);
-			this.imgPlay    = $("<a></a>").appendTo(this.imgNav);
-			this.counter    = $("<span class='pika-counter'></span>").appendTo(this.imgNav);
+			this.image	  = $("<img>").appendTo(this.wrap);
+			this.imgNav	 = $("<div class='pika-imgnav'></div>").insertAfter(this.image);
+			this.imgPlay	= $("<a></a>").appendTo(this.imgNav);
+			this.counter	= $("<span class='pika-counter'></span>").appendTo(this.imgNav);
 			if(this.options.autoPlay){ this.imgPlay.addClass('pause'); }else{ this.imgPlay.addClass('play'); }
 			this.imgPrev	= $("<a class='previous'></a>").insertAfter(this.imgPlay);
 			this.imgNext	= $("<a class='next'></a>").insertAfter(this.imgPrev);

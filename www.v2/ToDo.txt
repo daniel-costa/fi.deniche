@@ -5,8 +5,6 @@
 	+ returns@deniche.fi + in FI and SE
 	+ contact@deniche.fi
 
-- Pick good colors for bullets in the menu
-
 - Fill the description for products
 
 - Write page product & quality
@@ -24,3 +22,5 @@
 
 - Change lang attribute on html tag in all pages
 - Change page <title>
+
+- SQL Injection
