@@ -1,9 +1,2 @@
-www.v2/binaries/products/*
-www.v2/binaries/nbproject/*
+www.v2/binaries/nbproject/
 www.v2/binaries/products/
-www.v2\binaries\products\
-www.v2\binaries\products\*
-www.v2/binaries/products/img-0-thumb.png
-www.v2/binaries/products/img-0.png
-www.v2/binaries/products/img-10-thumb.png
-www.v2/binaries/products/img-10.png
