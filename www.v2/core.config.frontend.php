@@ -4,34 +4,16 @@
 
 	include_once('../backend/core.config.php');
 
-	include 'lang-' . getLang() . '.php';
+	include 'language.' . getLang() . '.php';
 
-	//return the total price
-	function getCartItems($product_ids) {
-		global $sql;
-
-		$items = array();
-		$item = array();
-
-		foreach ($product_ids as $product_id) {
-			$stmt = $sql->prepare("SELECT product.price, product.id, product_image.id  FROM product
-									INNER JOIN product_image 
-									ON product.id=product_image.product 
-									WHERE product_image.product = $product_id");
-			$stmt->execute();
-			$stmt->bind_result($price, $id, $thumb);
-			while ($stmt->fetch()) {
-				$item = array('id' => $id,
-					'price' => $price,
-					'thumb' => "binaries/products/img-$thumb-thumb.png");
-			}
-			array_push($items, $item);
+	function toggleFromFilter($value, $filter) {
+		if(($key = array_search($value, $_SESSION['filters'][$filter])) !== false) {
+			unset($_SESSION['filters'][$filter][$key]);
+		} else {
+			$_SESSION['filters'][$filter][] = $value;
 		}
-		$stmt->close();
-		return $items;
 	}
 
-	//return images array of the product
 	function getProductImages($product_id) {
 		global $sql;
 
@@ -45,6 +27,7 @@
 		}
 
 		$stmt->close();
+
 		return $images;
 	}
 
@@ -57,11 +40,11 @@
 								LEFT JOIN color c ON c.id = p.color
 								WHERE p.id = ?");
 
-
 		$stmt->bind_param("i", $product);
 		$stmt->execute();
 		$stmt->bind_result($id, $model, $model_id, $price, $bargain, $color, $hexa_light, $hexa_original, $thumb);
 		$stmt->fetch();
+		$stmt->close();
 
 		return array(
 			'id' => $id,

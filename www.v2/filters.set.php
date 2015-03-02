@@ -22,13 +22,5 @@
 		
 	}
 
-	function toggleFromFilter($value, $filter) {
-		if(($key = array_search($value, $_SESSION['filters'][$filter])) !== false) {
-			unset($_SESSION['filters'][$filter][$key]);
-		} else {
-			$_SESSION['filters'][$filter][] = $value;
-		}
-	}
-
 	back();
 ?>

@@ -1,11 +1,11 @@
 <?php
-	
+
 	include_once('core.config.frontend.php');
 
 	if(!isset($_GET['id']) or intval($_GET['id']) < 1){
 		back();
 	}
-	
+
 	$id = intval($_GET['id']);
 
 	if(!isset($_GET['id']) or intval($_GET['amt']) < 1){
@@ -25,4 +25,5 @@
 	}
 
 	back();
+
 ?>
