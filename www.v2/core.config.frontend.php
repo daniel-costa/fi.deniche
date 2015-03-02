@@ -42,6 +42,12 @@
 
 		$stmt->bind_param("i", $product);
 		$stmt->execute();
+		$stmt->store_result();
+
+		if($stmt->num_rows !== 1 ) {
+			return false;
+		}
+
 		$stmt->bind_result($id, $model, $model_id, $price, $bargain, $color, $hexa_light, $hexa_original, $thumb);
 		$stmt->fetch();
 		$stmt->close();

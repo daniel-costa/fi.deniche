@@ -2,7 +2,7 @@
 
 	$total = 0;
 
-	$isCartEmpty = count($_SESSION['cart']) == 0;
+	$isCartEmpty = count($_SESSION['cart']) === 0;
 
 ?>
 
@@ -31,7 +31,7 @@
 										<img src="<?php echo $item['thumb']; ?>"/>
 									</div>
 									<p class="price"><?php printf("%dx %.2f &euro;", $amount, $item['price']); ?></p>
-									<a href="cart-remove-<?php echo $item['id']; ?>.html" class="add-to-cart">Remove from cart</a>
+									<a href="cart-remove-<?php echo $item['id']; ?>.html" class="remove-from-cart">Remove from cart</a>
 								</div>
 							</div>
 						</li>
@@ -44,7 +44,7 @@
 			<?php } ?>
 		</div>
 
-		<h3 class="total text-center"><?php echo sprintf("%s %.2f &euro;", $lang['Total'], $total); ?></h3>
+		<h3 class="total text-center"><?php printf("%s %.2f &euro;", $lang['Total'], $total); ?></h3>
 
 		<a href="cart-checkout.html" class="btn checkout text-center" ><?php echo $lang['Checkout'] ?></a>
 	</div>

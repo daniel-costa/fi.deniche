@@ -8,10 +8,10 @@
 
 	$id = intval($_GET['id']);
 
-	if(!isset($_GET['id']) or intval($_GET['amt']) < 1){
+	if(!isset($_GET['amt']) or intval($_GET['amt']) < 1){
 		$amount = 1;
 	} else {
-		$amount = intval($_GET['id']);
+		$amount = intval($_GET['amt']);
 	}
 
 	if(!isset($_SESSION['cart'])){

@@ -46,7 +46,7 @@ and open the template in the editor.
 	margin: 0 auto;
 }
 .product_details .add_to_cart{
-	font-family: "Avenir Next";
+	font-family: "Avenir Next", "Helvetica Neue", Helvetica, sans-serif;
 	font-size: 15px;
 	font-weight: 800;
 	text-decoration: none;

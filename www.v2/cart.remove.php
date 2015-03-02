@@ -6,7 +6,7 @@
 		back();
 	}
 
-	$id = $_GET['id'];
+	$id = intval($_GET['id']);
 
 	unset($_SESSION['cart'][$id]);
 
