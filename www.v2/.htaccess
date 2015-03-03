@@ -1,5 +1,5 @@
 RewriteEngine on
-RewriteBase /~NintuMac/fi.deniche/www.v2/
+RewriteBase /fi.deniche/www.v2/
 
 RewriteRule ^index.html$	index.php [L]
 RewriteRule ^information.html$ information.php [L]
