@@ -2,9 +2,9 @@
 
 	$do_not_require_auth = true;
 
-	include_once('../backend/core.config.php');
+	include_once '../backend/core.config.php';
 
-	include 'language.' . getLang() . '.php';
+	include_once 'language.' . getLang() . '.php';
 
 	function toggleFromFilter($value, $filter) {
 		if(($key = array_search($value, $_SESSION['filters'][$filter])) !== false) {

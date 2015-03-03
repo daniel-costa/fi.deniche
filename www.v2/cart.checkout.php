@@ -33,7 +33,7 @@
 						<div class="myCart">
 
 							<div class="mycart_head">
-								<h4 class="myCart_text-center" style="">
+								<h4 class="myCart_text-center">
 									<?php echo $lang['Items in my cart']; ?> 
 								</h4>
 							</div>

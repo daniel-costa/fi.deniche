@@ -37,22 +37,21 @@
 					</div>
 
 					<!-- Middle part-->
-					<div class="col-xs-24 col-sm-12 col-md-14 col-lg-16 part-content">
+					<div class=" gallery col-xs-24 col-sm-12 col-md-14 col-lg-16 part-content">
 
-						<h1>Title text here</h1>
+						<h1><?php echo $product['model'];?></h1>
 
-						<div class="slide_show_main_image">
-							<img src="binaries/products/img-<?php echo $images_id[0]; ?>.png" alt="Placeholder" class="custom" style="background-color: #<?php echo $product['hexa_light']; ?>">
+						<div class="slide_show_main_image" style="background-color: #<?php echo $product['hexa_light']; ?>">
+							<img src="binaries/products/img-<?php echo $images_id[0]; ?>.png" alt="Placeholder" class="custom">
 						</div>
 
 						<div class="slideshow_thumbnails">
 							<ul>
 								<?php foreach ($images_id as $image_id) { ?>
-									<li>
+									<li style="background-color: #<?php echo $product['hexa_light']; ?>">
 										<a href="binaries/products/img-<?php echo $image_id; ?>.png"><img
 												src="binaries/products/img-<?php echo $image_id; ?>-thumb.png"
-												alt="Thumbnails"
-												style="height: 60px; width: 60px; display: inline">
+												alt="Thumbnails" class="thumbnails">
 										</a>
 									</li>
 								<?php } ?>
@@ -60,40 +59,40 @@
 						</div>
 
 						<div class="product_details">
-							<h2>Color name</h2>
+							<h2><?php echo $product['color'];?></h2>
 							<p>description</p>
 
 
-							<form action="add_to_cart.php"  method="get">
+							<form action="cart.add.php"  method="get">
 								<div class="row">
-									<div class="col-xs-3">
-										<h5 id="price-label" style="color: #FA5882; margin: 25px 0 0 10px; font-size: medium; font-weight: bold; width: 70px">
+									<div class="price-label col-xs-3">
+										<h5 id="price-label">
 											<?php printf("%.2f &euro;", $product['price']) ?>
 										</h5>
 									</div>
 
-									<div class="col-xs-3" style="margin-left: 40px;">
-										<h6 style="margin: 25px 0 0 75px; width: 50px; font-size: medium; color: #BDBDBD;">QTY:</h6>
+									<div class=" quantity_label col-xs-3">
+										<h6>QTY:</h6>
 									</div>
 
-									<div class="col-xs-3" style="float: right; width:70px; height: 100%; border:1px solid; border-color: #E6E6E6; background-color: #<?php echo $product['color']; ?>">
+									<div class="arrow col-xs-3">
 
 										<div id="up-arrow" onclick="upArrowClicked(<?php echo $product['stock'] . ", " . $product['price']; ?>)">
-											<span class="glyphicon glyphicon-chevron-up" style="margin-left: 13px; font-size: 10px; cursor:pointer; color: #BDBDBD;"></span>
+											<span class="up-arrow glyphicon glyphicon-chevron-up"></span>
 										</div>
 
-										<div id="quantity" style="margin-left: 13px; color: #BDBDBD;">
-											<input type="text"  style="border:none; background: #ffffff;" value="1" size="1"  name="num" disabled/>
+										<div id="quantity">
+											<input type="text" class="quantity_num" value="1" size="1"  name="num" disabled/>
 										</div>
 
 										<div id="down-arrow" onclick="downArrowClicked(<?php echo $product['price']; ?>)">
-											<span class="glyphicon glyphicon-chevron-down" style="margin-left: 13px; cursor:pointer; font-size: 10px; color: #BDBDBD;"></span>
+											<span class="down-arrow glyphicon glyphicon-chevron-down"> </span>
 										</div>
 									</div>
 								</div>
 
 								<input type="hidden" name="id" value="<?php echo $product['id']; ?>"/>
-								<input type="submit" value="<?php echo $lang['Add to cart']; ?>" class="add_to_cart"/>
+								<input type="submit" value="<?php echo $lang['Add to cart']; ?>" class="add-product-cart"/>
 
 							</form>
 						</div>
@@ -118,6 +117,7 @@
 			});
 
 			function upArrowClicked(max, price) {
+				document.write('Up arrow clicke');
 				var currentNo = parseInt($("#quantity input:text").val());
 
 				if (currentNo < max) {
