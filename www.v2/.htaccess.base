@@ -1,0 +1,17 @@
+RewriteEngine on
+RewriteBase /fi.deniche/www.v2/
+
+RewriteRule ^index.html$	index.php [L]
+RewriteRule ^information.html$ information.php [L]
+RewriteRule ^about/(.+).html$ information.html#$1 [NE,L,R]
+
+RewriteRule ^language-(.+).html$ language.choose.php?lang=$1 [L]
+RewriteRule ^(model|feature|color|thickness)-(.+)-(.+).html$ filters.set.php?filter=$1&id=$3 [L]
+
+RewriteRule ^cart-checkout.html$ cart.checkout.php [L]
+RewriteRule ^cart-remove-(.+).html$ cart.remove.php?id=$1 [L]
+RewriteRule ^cart-add-(.+).html$ cart.add.php?id=$1 [L]
+RewriteRule ^cart-add-(.+)-(.+).html$ cart.add.php?id=$1&amt=$2 [L]
+
+RewriteRule ^product-(.+).html$ product.php?id=$1 [L]
+RewriteRule ^product-(.+)-(.+).html$ product.php?id=$1 [L]
