@@ -80,7 +80,7 @@
 
 					<div class="col-xs-24 col-sm-12 col-md-14 col-lg-16 part-content"> 
 						<?php foreach ($products as $item) { ?>
-							<div class="product col-xs-12 col-md-8 col-lg-6">
+							<div class="product-preview col-xs-12 col-md-8 col-lg-6">
 								<div class="inner" style="background-color:#<?php echo $item['hexa_light']; ?>">
 									<h2><?php echo $item['model']; ?></h2>
 									<h3><?php echo $item['color']; ?></h3>
@@ -89,6 +89,9 @@
 									</div>
 									<p class="price"><?php echo $item['price']; ?>&euro;</p>
 									<a href="cart-add-<?php echo $item['id']; ?>.html" class="add-to-cart">Add to cart</a>
+									<a href="product-<?php echo $item['id']; ?>.html" class="view-product">
+										<span class="glyphicon glyphicon-eye-open"></span>
+									</a>
 								</div>
 							</div>
 						<?php } ?>

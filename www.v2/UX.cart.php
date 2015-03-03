@@ -2,8 +2,8 @@
 
 	$total = 0;
 
-	$isCartEmpty = count($_SESSION['cart']) === 0;
-
+	$isCartEmpty = !(isset($_SESSION['cart']) and count($_SESSION['cart']) > 0);
+	
 ?>
 
 <div class="col-xs-24 col-sm-6 col-md-5 col-lg-4 part-menu">
@@ -12,7 +12,7 @@
 			<?php echo $lang['Items in'] ?>
 			<?php echo $lang['cart'] ?>
 		</h4>
-		<div class="content <?php if($isCartEmpty) echo 'cart-empty'; ?>">
+		<div class="content<?php if($isCartEmpty) echo ' cart-empty'; ?>">
 			<img class="arrow" src="images/arrow-top-black.png" />
 
 			<?php if (!$isCartEmpty) { ?>
@@ -23,7 +23,7 @@
 							$total += $item['price'] * $amount;
 					?>
 						<li>
-							<div class="product">
+							<div class="product-preview">
 								<div class="inner" style="">
 									<h2><?php echo $item['model']; ?></h2>
 									<h3><?php echo $item['color']; ?></h3>
