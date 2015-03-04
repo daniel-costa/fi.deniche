@@ -32,6 +32,9 @@
 									</div>
 									<p class="price"><?php printf("%dx %.2f &euro;", $amount, $item['price']); ?></p>
 									<a href="cart-remove-<?php echo $item['id']; ?>.html" class="remove-from-cart">Remove from cart</a>
+									<a href="product-<?php echo $item['id']; ?>.html" class="view-product">
+										<span class="glyphicon glyphicon-eye-open"></span>
+									</a>
 								</div>
 							</div>
 						</li>

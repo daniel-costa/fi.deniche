@@ -37,66 +37,74 @@
 					</div>
 
 					<!-- Middle part-->
-					<div class=" gallery col-xs-24 col-sm-12 col-md-14 col-lg-16 part-content">
+					<div class="col-xs-24 col-sm-11 col-md-13 col-lg-15 part-content">
 
-						<h1><?php echo $product['model'];?></h1>
+						<h1>We present to you our product range the <span><?php echo $product['model'];?></span> in his version <span><?php echo $product['color'];?></span></h1>
 
-						<div class="slide_show_main_image" style="background-color: #<?php echo $product['hexa_light']; ?>">
-							<img src="binaries/products/img-<?php echo $images_id[0]; ?>.png" alt="Placeholder" class="custom">
+						<div class="slideshow">
+							<div class="main" style="background-color: #<?php echo $product['hexa_light']; ?>">
+								<img src="binaries/products/img-<?php echo $images_id[0]; ?>.png" alt="Placeholder" class="preview">
+							</div>
+
+							<div class="thumbs">
+								<ul>
+									<?php foreach ($images_id as $image_id) { ?>
+										<li style="background-color: #<?php echo $product['hexa_light']; ?>">
+											<a href="binaries/products/img-<?php echo $image_id; ?>.png">
+												<img src="binaries/products/img-<?php echo $image_id; ?>-thumb.png"/>
+											</a>
+										</li>
+									<?php } ?>
+								</ul>
+								<div class="clearfix"></div>
+							</div>
 						</div>
 
-						<div class="slideshow_thumbnails">
-							<ul>
-								<?php foreach ($images_id as $image_id) { ?>
-									<li style="background-color: #<?php echo $product['hexa_light']; ?>">
-										<a href="binaries/products/img-<?php echo $image_id; ?>.png"><img
-												src="binaries/products/img-<?php echo $image_id; ?>-thumb.png"
-												alt="Thumbnails" class="thumbnails">
-										</a>
-									</li>
-								<?php } ?>
-							</ul>
-						</div>
 
-						<div class="product_details">
-							<h2><?php echo $product['color'];?></h2>
-							<p>description</p>
+						<div class="details">
+							<h2>Information about our iPhone case the <span><?php echo $product['model'];?></span></h2>
+							<p>
+								Aliquam rhoncus turpis a metus pulvinar, ut rutrum massa suscipit. Nullam dictum, ante in 
+								tincidunt tincidunt, dolor erat aliquet turpis, volutpat fermentum felis lorem non nulla. 
+								Duis quis nibh at nunc blandit tempus adipiscing vitae lorem. Integer auctor pellentesque 
+								diam, nec tempor nisi feugiat eget. s turpis a metus pulvinar, ut rutrum massa suscipit. 
+								Nullam dictum, ante in tincidunt tincidunt, dolor erat ali
+							</p>
 
 
 							<form action="cart.add.php"  method="get">
-								<div class="row">
-									<div class="price-label col-xs-3">
-										<h5 id="price-label">
-											<?php printf("%.2f &euro;", $product['price']) ?>
-										</h5>
-									</div>
+								<div class="add-to-cart container-fluid col-lg-10 col-lg-offset-7">
+									<div class="row first">
+										<div class="price col-lg-11"><?php printf("%.2f &euro;", $product['price']) ?></div>
 
-									<div class=" quantity_label col-xs-3">
-										<h6>QTY:</h6>
-									</div>
+										<div class="quantity-label col-xs-7">QTY:</div>
 
-									<div class="arrow col-xs-3">
-
-										<div id="up-arrow" onclick="upArrowClicked(<?php echo $product['stock'] . ", " . $product['price']; ?>)">
-											<span class="up-arrow glyphicon glyphicon-chevron-up"></span>
+										<div class="controls col-xs-6">
+											<div class="arrow up">
+												<span class="up-arrow glyphicon glyphicon-chevron-up"> </span>
+											</div>
+											<div class="quantity">1</div>
+											<div class="arrow down">
+												<span class="down-arrow glyphicon glyphicon-chevron-down"> </span>
+											</div>
 										</div>
-
-										<div id="quantity">
-											<input type="text" class="quantity_num" value="1" size="1"  name="num" disabled/>
-										</div>
-
-										<div id="down-arrow" onclick="downArrowClicked(<?php echo $product['price']; ?>)">
-											<span class="down-arrow glyphicon glyphicon-chevron-down"> </span>
+									</div>
+									<div class="row second">
+										<div class="col-xs-24">
+											<input type="submit" value="<?php echo $lang['Add to cart']; ?>" />
+											<input type="hidden" name="amt" value="1" />
+											<input type="hidden" name="id" value="<?php echo $product['id']; ?>" />
+											<input type="hidden" name="price" value="<?php echo $product['price']; ?>" />
 										</div>
 									</div>
 								</div>
 
-								<input type="hidden" name="id" value="<?php echo $product['id']; ?>"/>
-								<input type="submit" value="<?php echo $lang['Add to cart']; ?>" class="add-product-cart"/>
 
 							</form>
 						</div>
 					</div>
+
+					<div class="hidden-xs col-sm-1"> </div>
 
 					<!--   Right side-->
 					<?php include 'UX.cart.php'; ?>
@@ -106,42 +114,5 @@
 
 		<?php include_once('UX.section.footer.php'); ?>
 		<?php include_once('UX.scripts.php'); ?>
-		<script>
-
-			$(document).ready(function () {
-				$('.slideshow_thumbnails').simpleGal({
-					mainImage: '.custom'
-				});
-
-				//up arrow click function
-			});
-
-			function upArrowClicked(max, price) {
-				document.write('Up arrow clicke');
-				var currentNo = parseInt($("#quantity input:text").val());
-
-				if (currentNo < max) {
-					var newVal = currentNo + 1;
-					$("#quantity input:text").val(newVal);
-					var newPrice = parseFloat(Math.round((price * newVal) * 100) / 100).toFixed(2) + "\u20AC";
-					$("#price-label").text(newPrice);
-
-				}
-			}
-
-			//down arrow click function
-			function downArrowClicked(price) {
-				var currentNo = parseInt($("#quantity input:text").val());
-
-				if (currentNo > 1) {
-					var newVal = currentNo - 1;
-					$("#quantity input:text").val(newVal);
-					var newPrice = parseFloat(Math.round((price * newVal) * 100) / 100).toFixed(2) + "\u20AC";
-					$("#price-label").text(newPrice);
-
-				}
-			}
-
-		</script>
 	</body>
 </html>

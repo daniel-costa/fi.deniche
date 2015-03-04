@@ -1,0 +1,126 @@
+body.product .part-content h1, body.product .part-content h2 {
+	font-family: "Avenir Next", "Helvetica Neue", Helvetica, sans-serif;
+	margin-top: 0px;
+	margin-bottom: 25px;
+	font-size: 18px;
+	font-weight: 100;
+	color: #2b2e2f;
+}
+
+body.product .part-content h1 span, body.product .part-content h2 span {
+	font-weight : normal;
+}
+
+body.product .part-content h2 {
+	margin-top: 50px;
+	margin-bottom : 10px;
+}
+
+body.product .part-content p {
+	line-height: 20px;
+	font-family: "Avenir Next", "Helvetica Neue", Helvetica, sans-serif;
+	font-size: 16px;
+	font-weight : lighter;
+	color: #6e777a;
+	line-height: 30px;
+	text-align: justify;
+}
+
+
+body.product .part-content .preview {
+	width: 100%;
+}
+
+
+body.product .part-content .slideshow .thumbs ul{
+	list-style-type: none;
+	position: relative;
+	padding : 0px;
+	margin : 0px;
+}
+
+body.product .part-content .slideshow .thumbs ul li {
+	float: left;
+	width: 100px;
+	display: inline-block;
+	margin: 5px 5px 0px 0px;
+}
+
+body.product .part-content .slideshow .thumbs ul li a {
+	padding : 5px;
+	display : inline-block;
+}
+
+body.product .part-content .slideshow .thumbs ul li a img {
+	max-width: 100%;
+}
+
+
+body.product .part-content .add-to-cart {
+	margin-top : 50px;
+}
+
+body.product .part-content .add-to-cart .row.first {
+	border: 1px solid #efefef;
+	margin-bottom: 20px;
+}
+
+body.product .part-content .add-to-cart .row.second div { 
+	padding:0px;
+}
+
+body.product .part-content .add-to-cart .price {
+	font-family: "Avenir Next", "Helvetica Neue", Helvetica, sans-serif;
+	color: #ef2146;
+	font-size: 17px; 
+	font-weight: 500;
+	line-height: 65px;
+	padding : 0px 0px 0px 20px;
+}
+
+body.product .part-content .add-to-cart .quantity-label {
+	font-family: "Avenir Next", "Helvetica Neue", Helvetica, sans-serif;
+	color: #6e777a;
+	font-size: 16px;
+	font-weight: 300;
+	line-height: 65px;
+	text-align: right;
+	padding : 0px 10px 0px 0px;
+}
+
+body.product .part-content .add-to-cart .controls {
+	height : 65px;
+	padding : 0px;
+	background : #f2fafb;
+	text-align : center;
+	border-left: 1px solid #efefef;
+	color: #6e777a;
+	font-size: 10px;
+}
+
+body.product .part-content .add-to-cart .controls .arrow {
+	line-height : 20px;
+	cursor: pointer;
+}
+
+body.product .part-content .add-to-cart .controls .quantity {
+	font-family: "Avenir Next", "Helvetica Neue", Helvetica, sans-serif;
+	color: #6e777a;
+	font-size: 16px;
+	font-weight: 500;
+	line-height : 25px;
+	text-align: center;
+}
+
+body.product .part-content .add-to-cart input[type="submit"] {
+	font-family: "Avenir Next", "Helvetica Neue", Helvetica, sans-serif;
+	font-size: 12px;
+	font-weight: bold;
+	text-transform: uppercase;
+	background: #ef2146;
+	color: white;
+	line-height: 65px;
+	text-align: center;
+	border: none;
+	width : 100%;
+}
