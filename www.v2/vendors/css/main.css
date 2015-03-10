@@ -775,17 +775,19 @@ body.product .part-content .add-to-cart input[type="submit"] {
 .checkout_nav li{
 	display: inline;
 	padding: 5px 170px 5px 30px;
-
-}
-.checkout_nav a{
 	text-decoration: none;
 	position: relative;
 	color: rgba(181, 204, 208, 1);
 	text-transform: uppercase;
 	font-size: 14px;
+
 }
-.checkout_nav a.active{
-	font-weight: 700;
+.checkout_nav h3{
+	text-decoration: none;
+	position: relative;
+	color: rgba(181, 204, 208, 1);
+	text-transform: uppercase;
+	font-size: 14px;
 }
 .required{
 	font-weight: normal;
@@ -816,8 +818,8 @@ body.product .part-content .add-to-cart input[type="submit"] {
 	width: 88%;
 	outline: none;
 }
-#city, #zip{
-	width: 295px;;
+#city, #zip, #email, #phoneNumber{
+	width: 295px;
 	display: inline;
 	outline: none;
 }
@@ -848,5 +850,4 @@ body.product .part-content .add-to-cart input[type="submit"] {
 	padding: 5px 15px 5px 15px;
 	font-family: "Avenir Next", "Helvetica Neue", Helvetica, sans-serif;
 	font-size: 18px;
-
 }

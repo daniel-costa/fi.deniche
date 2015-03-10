@@ -55,6 +55,8 @@
 		'General inquiries' => 'General inquiries',
 		'Return a product' => 'Return a product',
 		'or by phone' => 'or by phone',
-		'Social media' => 'Social media'
+		'Social media' => 'Social media',
+		'email'  => 'Email',
+		'phoneNumber'  => 'Phone number'
 	);
 ?>

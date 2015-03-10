@@ -103,24 +103,20 @@
 							<div class="checkout_nav">
 								<ul>
 
-									<li>
-										<a class="link_nav_1" href="#" rel="shipping">  <?php echo $lang['Shipping']; ?></a>
-									</li>
-									
+									<li class="link_nav_1"><?php echo $lang['Shipping']; ?></li>
 
-									<li>
-										<a class="link_nav_2" href="#" rel="payment">  <?php echo $lang['Payment']; ?></a>
+									<li class="link_nav_2"><?php echo $lang['Payment']; ?></li>
+	
+									<li class="link_nav_3">
+										<?php echo $lang['Receipt']; ?>
 									</li>
+										
 									
-									<li>
-										<a class="link_nav_3" href="#" rel="receipt">  <?php echo $lang['Receipt']; ?></a>
-									</li>
 								</ul>
 							</div>
 
-							<div id="first_nav">
-
-								<form class="form" method="post" name="form" onsubmit="return validateForm();">
+								<div id="first_nav">
+								<form id="shipping-form" class="form" method="post" name="shipping-form" onsubmit="return validateForm();">
 
 									<input name="firstname" type="text" id="first_name" placeholder="<?php echo $lang['First name']; ?>" class="required"/>
 									<input name="lastname" type="text" id="last_name" placeholder="<?php echo $lang['Last name']; ?>" class="required"/>
@@ -128,21 +124,23 @@
 									<input name="address2" type="text" id="address2" placeholder="<?php echo $lang['Address line 2']; ?>"/>
 									<input name="city"  type="text" id="city" placeholder="<?php echo $lang['City']; ?>" class="required"/>
 									<input name="zipcode" type="text" id="zip" placeholder="<?php echo $lang['Zip code']; ?>" class="required"/>
+									<input name="email" type="text" id="email" placeholder="<?php echo $lang['email']; ?>" class="required"/>
+									<input name="phoneNumber" type="text" id="phone" placeholder="<?php echo $lang['phoneNumber']; ?>" class="required"/>
 									<select name="country" placeholder="Choose" id="country">
 										<option>Finland</option>
 										<option>Sweden</option>
 										<option>Norway</option>
 									</select><br>
+									<input name="amount" type="hidden" value="<?php echo $total ;?>"/>
+									<input name="delivery_submit" type="hidden" />
 									<input name="submit" class="btn" id="btn" type="submit" value="<?php echo $lang['Continue']; ?>" />
 
-								</form>
-
+								</form> 
 							</div>
 
 
 							<div id="second_nav" style="display: none;">
-								<h1>payment</h1>
-
+								
 							</div>
 
 							<div id="third_nav" style="display: none">
@@ -159,82 +157,5 @@
 		<?php include_once('UX.section.footer.php'); ?>
 		<?php include_once('UX.scripts.php'); ?>
 
-		<script>
-			
-			$('.item_remove').click(function (e) {
-
-				$(this).closest('tr').remove();
-				return false;
-				e.preventDefault();
-			});
-		 
-
-			$(".link_nav_1").on('click', function (e) {
-				//hide other two divs
-				$("#second_nav").css("display", "none");
-				$("#third_nav").css("display", "none");
-				//display the nav to show
-				$("#first_nav").css("display", "inline");
-				return false;
-				e.preventDefault();
-			});
-			$(".link_nav_2").on('click', function (e) {
-				validateForm();
-				$("#first_nav").css("display", "none");
-				$("#third_nav").css("display", "none");
-				$("#second_nav").css("display", "inline");
-				return false;
-				e.preventDefault();
-			});
-			$(".link_nav_3").on('click', function (e) {
-				$("#first_nav").css("display", "none");
-				$("#second_nav").css("display", "none");
-				$("#third_nav").css("display", "inline");
-				return false;
-				e.preventDefault();
-			});
-
-			function validateForm() {
-				var all_fields = document.getElementById('first_name', 'last_name', 'address1', 'city', 'zip');
-				var firstname = document.getElementById('first_name');
-				var lastname = document.getElementById('last_name');
-				var address = document.getElementById('address1');
-				var city = document.getElementById('city');
-				var zip = document.getElementById('zip');
-				if (all_fields.value.length === 0) {
-					$(".error_message").css("display", "inline-block");
-					$(".error_message").html("1. Please fill in your shipping details.")
-							.show();
-					return false;
-				} else if (firstname.value.length === 0) {
-					$(".error_message").css("display", "inline-block");
-					$(".error_message").html("1. Please fill in your shipping details. First name is missing.")
-							.show();
-					return false;
-				} else if (lastname.value.length === 0) {
-					$(".error_message").css("display", "inline-block");
-					$(".error_message").html("1. Please fill in your shipping details. Last name is missing.")
-							.show();
-					return false;
-				} else if (address.value.length === 0) {
-					$(".error_message").css("display", "inline-block");
-					$(".error_message").html("1. Please fill in your shipping details. Address is missing.")
-							.show();
-					return false;
-				} else if (city.value.length === 0) {
-					$(".error_message").css("display", "inline-block");
-					$(".error_message").html("1. Please fill in your shipping details. Address is missing.")
-							.show();
-					return false;
-				} else if (zip.value.length === 0) {
-					$(".error_message").css("display", "inline-block");
-					$(".error_message").html("1. Please fill in your shipping details. Zip code is missing.")
-							.show();
-					return false;
-				} else {
-					$(".error_message").css("display", "none");
-				}
-			}
-		</script>
 	</body>
 </html>

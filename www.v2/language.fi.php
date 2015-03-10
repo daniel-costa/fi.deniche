@@ -54,7 +54,9 @@
 		'General inquiries' => 'Yleiset tiedustelut',
 		'Return a product' => 'Palauta tuote',
 		'or by phone' => 'tai puhelimitse',
-		'Social media' => 'Sosiaalinen media'
+		'Social media' => 'Sosiaalinen media',
+		'email'  => 'Sähköposti'
+		'phoneNumber'  => 'Puhelin numero'
 	);
 
 ?>
