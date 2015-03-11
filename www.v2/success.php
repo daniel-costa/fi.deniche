@@ -33,9 +33,7 @@ $module = new Paytrail_Module_Rest(13466, "6pKF4jkv97zmqBJ3ZL8gUw5DfT2NMQ");
 
 if ($module->confirmPayment($_GET["ORDER_NUMBER"], $_GET["TIMESTAMP"], $_GET["PAID"], $_GET["METHOD"], $_GET["RETURN_AUTHCODE"])) {
     // Payment receipt is valid
-    // If needed, the used payment method can be found from the variable $_GET["METHOD"]
-    // and order number for the payment from the variable $_GET["ORDER_NUMBER"]
-
+  
     $ORDER_NUMBER = mysql_real_escape_string($_GET['ORDER_NUMBER']);
     $TIMESTAMP = mysql_real_escape_string($_GET['TIMESTAMP']);
     $PAID = mysql_real_escape_string($_GET['PAID']);
@@ -53,7 +51,6 @@ if ($module->confirmPayment($_GET["ORDER_NUMBER"], $_GET["TIMESTAMP"], $_GET["PA
 
     echo "<br/>";
     
-	echo "Payment success";
 	//$_SESSION['cart'] = "";
 	unset($_SESSION['cart']);
 }

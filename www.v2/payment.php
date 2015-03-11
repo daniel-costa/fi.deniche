@@ -61,7 +61,7 @@ if (isset($_POST['delivery_submit'])) {
 ?>
 <div class="payment-content">
 
-    <div class="shipping-details">
+    <!-- <div class="shipping-details">
         <h1>Your Shipping details</h1>
         <table>
             <tr><td>Name:</td><td><?php echo $FIRSTNAME.' '.$LASTNAME ;?></td></tr>
@@ -74,19 +74,25 @@ if (isset($_POST['delivery_submit'])) {
             <tr><td>Phone:</td><td><?php echo $PHONE;?></td> </tr>
         </table>
     </div>
-
+ -->
     <div class="payment-details">
     <h1>Your payment details</h1>
     <table>
+         <tr class="row-head">
+            <th>Item</th>
+            <th>Model</th>
+            <th>QTY</th>
+            <th>Price</th>
+        </tr>
     <?php
         if ($items > 0) {
             foreach ($_SESSION['cart'] as $id => $amount) {
                 $item = getProduct($id);
                 $total += $item['price'] * $amount;
     ?>
-        <tr>
+        <tr class="row-items">
             <td id="row-img"><img src="<?php echo $item['thumb']; ?>"/></td>
-            <td><?php echo $item['model'];?>&nbsp;(<?php echo $item['color'];?>)</td>
+            <td><?php echo $item['model'];?></td>
             <td><?php echo $amount;?></td>
             <td><?php echo $item['price']; ?> &euro;</td>   
         </tr>
