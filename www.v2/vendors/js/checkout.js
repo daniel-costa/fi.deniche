@@ -48,7 +48,21 @@
    				event.preventDefault();
 
 			    $("#third_nav").html('');
-			    var values = 
+
+			    var values = //Don´t know what to be here
+			    $.ajax({
+			        url: "success.php",
+			        type: "get",
+			        data: values,
+			        success: function(html){
+			            //alert("success");
+			            $("#third_nav").html(html);
+
+			        },
+			        error:function(){
+			            $("#third_nav").html('There is error while submit');
+			        }
+			    });
 
    			}
 
