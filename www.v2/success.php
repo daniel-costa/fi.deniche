@@ -23,12 +23,6 @@ require_once "Paytrail_Module_Rest.php";
 	
 	}
 
-	echo "Total amount ". $total;
-	echo "<br/>";
-
-	echo "No of items : ".$items;
-	echo "<br/>";
-
 $module = new Paytrail_Module_Rest(13466, "6pKF4jkv97zmqBJ3ZL8gUw5DfT2NMQ");
 
 if ($module->confirmPayment($_GET["ORDER_NUMBER"], $_GET["TIMESTAMP"], $_GET["PAID"], $_GET["METHOD"], $_GET["RETURN_AUTHCODE"])) {
@@ -36,20 +30,18 @@ if ($module->confirmPayment($_GET["ORDER_NUMBER"], $_GET["TIMESTAMP"], $_GET["PA
   
     $ORDER_NUMBER = mysql_real_escape_string($_GET['ORDER_NUMBER']);
     $TIMESTAMP = mysql_real_escape_string($_GET['TIMESTAMP']);
-    $PAID = mysql_real_escape_string($_GET['PAID']);
     
 
     date_default_timezone_set('Europe/Helsinki');
     $dateTime = date("d/m/Y", $TIMESTAMP);
-
-    echo $PAID;
-    echo "<br/>";
-
     echo $dateTime;
+
     echo "<br/>";
     echo $ORDER_NUMBER; 
 
     echo "<br/>";
+    echo sprintf("%s %.2f &euro;", $lang['Total'], $total);
+
     
 	//$_SESSION['cart'] = "";
 	unset($_SESSION['cart']);

@@ -140,6 +140,8 @@
 
 
 							<div id="second_nav" style="display: none;">
+
+
 								
 							</div>
 
@@ -156,6 +158,5 @@
 
 		<?php include_once('UX.section.footer.php'); ?>
 		<?php include_once('UX.scripts.php'); ?>
-
 	</body>
 </html>

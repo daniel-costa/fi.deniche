@@ -76,40 +76,40 @@ if (isset($_POST['delivery_submit'])) {
     </div>
  -->
     <div class="payment-details">
-    <h1>Your payment details</h1>
-    <table>
-         <tr class="row-head">
-            <th>Item</th>
-            <th>Model</th>
-            <th>QTY</th>
-            <th>Price</th>
-        </tr>
+        <h1>Your payment details</h1>
+        <table>
+            <tr class="row-head">
+                <th>Item</th>
+                <th>Model</th>
+                <th>QTY</th>
+                <th>Price</th>
+            </tr>
     <?php
         if ($items > 0) {
             foreach ($_SESSION['cart'] as $id => $amount) {
                 $item = getProduct($id);
                 $total += $item['price'] * $amount;
     ?>
-        <tr class="row-items">
-            <td id="row-img"><img src="<?php echo $item['thumb']; ?>"/></td>
-            <td><?php echo $item['model'];?></td>
-            <td><?php echo $amount;?></td>
-            <td><?php echo $item['price']; ?> &euro;</td>   
-        </tr>
+            <tr class="row-items">
+                <td id="row-img"><img src="<?php echo $item['thumb']; ?>"/></td>
+                <td><?php echo $item['model'];?></td>
+                <td><?php echo $amount;?></td>
+                <td><?php echo $item['price']; ?> &euro;</td>   
+            </tr>
     <?php
             }
         } else {
     ?>
-        <tr><td>Cart empty</td></tr>
+            <tr><td>Cart empty</td></tr>
     <?php
         }
     ?>
-    </table>
-    <div class="payment-total"><?php echo sprintf("%s %.2f &euro;", $lang['Total'], $total); ?></div>
+        </table>
+        <div class="payment-total"><?php echo sprintf("%s %.2f &euro;", $lang['Total'], $total); ?></div>
     </div>
+
     
-    
-    <div class ="payment-form">
+    <div action ="https://payment.paytrail.com/" class ="payment-form">
         <form action="https://payment.paytrail.com/" method="post">
             <input name="MERCHANT_ID" type="hidden" value="<?php echo $MERCHANT_ID; ?>">
             <input name="AMOUNT" type="hidden" value="<?php echo $AMOUNT; ?>">

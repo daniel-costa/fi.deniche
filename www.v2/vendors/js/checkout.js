@@ -1,3 +1,4 @@
+
 			function ajaxSubmitForm(){
 
 			    event.preventDefault();
@@ -22,9 +23,10 @@
 			            $(".payment-details table tr #row-img img").css("width", "40px").css("height","40px").css("margin-left","10px");
 			            $(".payment-details table .row-head th").css("background-color", "#D8D8D8").css("text-align", "center").css("font-family", "Avenir Next, Helvetica Neue, Helvetica, sans-serif");
 			            $(".payment-details table tr td").css("word-wrap", "break-word");
-			            $(".payment-total").css("float", "right").css("display", "block").css("text-align", "center").css("width","50%").css( "font-size","15px").css( "margin","5px 0 5px 15px");
-			            $(".payment-form").css("float", "right").css("display", "block").css("text-align", "center").css("width","50%").css( "margin","5px 0 5px 0");
-			            $(".paytrail-banner img").css("width","100%").css("margin", "10px 5px 10px 5px");
+			            $(".payment-total").css("float", "right").css("display", "block").css( "font-size","15px").css("margin-top", "5px");
+			            $(".payment-form").css("width", "100%").css("margin-top","40px").css("text-align", "center");
+			            $(".payment-form #payment-btn").css("width","90px").css("margin-right", "95px");
+			            $(".paytrail-banner img").css("width","98%").css("margin", "10px 5px 10px 5px");
 			            $(".payment-details table .row-items td").css("text-align", "center");
 
 			            /*$(".shipping-details").css("float", "left").css( "width","50%");
@@ -36,7 +38,6 @@
 			            $("#second_nav").css("display", "inline");
 			            $("#first_nav").css("display", "none");
 						$("#third_nav").css("display", "none");
-
 			        },
 			        error:function(){
 			            $("#second_nav").html('There is error while submit');
@@ -44,27 +45,6 @@
 			    });
    			}
 
-   			function paymentSuccess(){
-   				event.preventDefault();
-
-			    $("#third_nav").html('');
-
-			    var values = //Don´t know what to be here
-			    $.ajax({
-			        url: "success.php",
-			        type: "get",
-			        data: values,
-			        success: function(html){
-			            //alert("success");
-			            $("#third_nav").html(html);
-
-			        },
-			        error:function(){
-			            $("#third_nav").html('There is error while submit');
-			        }
-			    });
-
-   			}
 
 			function validateForm() {
 

@@ -55,7 +55,7 @@
 		'Return a product' => 'Palauta tuote',
 		'or by phone' => 'tai puhelimitse',
 		'Social media' => 'Sosiaalinen media',
-		'email'  => 'Sähköposti'
+		'email'  => 'Sähköposti',
 		'phoneNumber'  => 'Puhelin numero'
 	);
 
