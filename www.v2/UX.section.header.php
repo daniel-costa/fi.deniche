@@ -12,20 +12,6 @@
 		</div>
 	</div>
 
-
-	<!-- <div class="row search">
-		<div class="col-xs-24 col-sm-18 col-sm-offset-3 col-md-14 col-md-offset-5 col-lg-12 col-lg-offset-6">
-			<div class="input-group">
-				<input type="text" class="form-control" placeholder="Mistä haet?">
-				<span class="input-group-btn">
-					<button class="btn btn-default" type="button">
-						<img src="images/ico-search.png"/>
-					</button>
-				</span>
-			</div>
-		</div>
-	</div>  -->
-
 	<div class="row title">
 		<h1 class="text-center">iPhone kuoret</h1>
 	</div>
